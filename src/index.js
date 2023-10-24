@@ -4,21 +4,29 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener('submit', (e) => {
     e.preventDefault()
     let value = document.querySelector('input').value
+    //do not populate task if field is blank!!
     if(value !== '') {
       buildToDo(e.target['new-task-description'].value)
       form.reset()
     } else {}
   })
 
+  //Build task list functionality
   function buildToDo(todo){
     let li = document.createElement('li')
-    li.textContent=`${todo} `
-    li.setAttribute('contenteditable', 'true')
+    let span = document.createElement('span')
+    span.textContent=`${todo.toUpperCase()} `
     document.querySelector('#tasks').appendChild(li)
     let btn = document.createElement('button')
     btn.textContent = "x"
     li.appendChild(btn)
+    li.appendChild(span)
     btn.addEventListener('click', handleDelete)
+
+    //set task as editable
+    span.setAttribute('contenteditable', 'true')
+    
+    //create dropdown options
     let select = document.createElement('select')
     let option = document.createElement('option')
     option.text = 'Choose a priority...'
@@ -40,15 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     selectElements = document.querySelectorAll('select')
     output = selectElements[0].value
 
-    //Resetting the li element
-    
-
-    // allow delete after li is edited
-
-
-    //sorting li elements by priority
-    
-
     //alter color based on dropdown selection
     select.addEventListener('change', (e) => {
       let selectedValue = e.target.value;
@@ -64,10 +63,26 @@ document.addEventListener("DOMContentLoaded", () => {
         li.classList.add('eventually');
       }
     });
+
+    //due date field
+    let date = document.createElement('input')
+    date.type = "date"
+    date.label = "Enter due date here"
+    li.appendChild(date)
+
   }
+
+  //Delete Button function
   function handleDelete(e){
     e.target.parentNode.remove()
   }
+
+  //sorting li elements by priority
+  function sortPriority() {
+
+  }
+
+  
 
 //UPdate h1 to h2
 let itBeH2 = document.querySelector('h1')
