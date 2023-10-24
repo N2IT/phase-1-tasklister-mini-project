@@ -10,10 +10,6 @@ body {
   background: linear-gradient(rgb(131, 185, 239), rgb(109, 41, 234));
 }
 
-button {
-  font-size: 7px;
-}
-
 #main-content {
   position: relative;
   display: flex;
@@ -36,12 +32,12 @@ button {
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
-  width: 200px;
   text-align: center;
+  width: 55%;
 }
 
 .button {
-  border-radius: 5px;
+    border-radius: 5px;
     height: 40px;
     border: 1px solid #3339;
     box-shadow: 2px 1px 3px #333;
@@ -56,6 +52,29 @@ button {
   box-shadow: 2px 1px 3px #333;
 }
 
+select {
+  margin-left: 2%;
+}
+
 ul {
   text-align: left;
+}
+
+li {
+  padding: 2%;
+}
+
+.urgent {
+  background-color: red;
+  color: #fff;
+}
+
+.secondary {
+  background-color: orange;
+  color: #fff;
+}
+
+.eventually { 
+  background-color: green;
+  color: #fff;
 }
