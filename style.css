@@ -7,7 +7,7 @@ html {
 body {
   min-height: 100%;
   min-width: 100%;
-  background: linear-gradient(pink, violet);
+  background: linear-gradient(rgb(131, 185, 239), rgb(109, 41, 234));
 }
 
 button {
@@ -25,6 +25,8 @@ button {
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+  max-width: 600px;
+  margin: auto;
 }
 
 #list {
@@ -34,4 +36,26 @@ button {
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+  width: 200px;
+  text-align: center;
+}
+
+.button {
+  border-radius: 5px;
+    height: 40px;
+    border: 1px solid #3339;
+    box-shadow: 2px 1px 3px #333;
+    color: #fff;
+    background: #666;
+}
+
+.input {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  box-shadow: 2px 1px 3px #333;
+}
+
+ul {
+  text-align: left;
 }
